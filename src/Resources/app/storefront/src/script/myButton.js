@@ -22,7 +22,6 @@ export default class MyButton extends AddToCartPlugin {
 				this.updateButtonAppearance(button);
 				setTimeout(() => {
 					this.restoreButtonAppearance(button);
-					this._openOffCanvasCart;
 				}, 1000);
 			});
 		});
