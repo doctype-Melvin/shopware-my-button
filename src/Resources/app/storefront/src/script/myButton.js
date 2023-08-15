@@ -1,6 +1,6 @@
-import Plugin from "src/plugin-system/plugin.class";
+import AddToCart from "src/plugin/add-to-cart/add-to-cart.plugin";
 
-export default class MyButton extends Plugin {
+export default class MyButton extends AddToCart {
 	static options = {
 		buttonInitialTextContent: `In den Warenkorb`,
 		buttonInitialColor: `#0b539b`,
@@ -19,11 +19,11 @@ export default class MyButton extends Plugin {
 	}
 
 	init() {
+		super.init();
+		console.info(window.PluginManager.getPluginInstancesFromElement(this.el));
 		const allBuyButtons = [...document.querySelectorAll(".btn-buy")];
-
 		allBuyButtons.forEach((button) => {
 			button.textContent = this.options.buttonInitialTextContent;
-
 			button.addEventListener("click", () => {
 				this.updateButtonAppearance(button);
 				setTimeout(() => this.restoreButtonAppearance(button), 1000);
