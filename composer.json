@@ -1,0 +1,18 @@
+{
+	"name": "mlvn/my-button",
+	"description": "My Shopware Button",
+	"type": "shopware-platform-plugin",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"MyButton\\": "src/"
+		}
+	},
+	"extra": {
+		"shopware-plugin-class": "MyButton\\MyButton",
+		"label": {
+			"de-DE": "Theme MyButton plugin",
+			"en-GB": "Theme MyButton plugin"
+		}
+	}
+}
