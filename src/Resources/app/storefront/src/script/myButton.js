@@ -17,7 +17,6 @@ export default class MyButton extends AddToCartPlugin {
 
 		const allBuyButtons = [...document.querySelectorAll(".btn-buy")];
 		allBuyButtons.forEach((button) => {
-			console.info("It Works!");
 			button.textContent = this.options.buttonInitialTextContent;
 			button.addEventListener("click", () => {
 				this.updateButtonAppearance(button);
