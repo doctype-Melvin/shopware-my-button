@@ -1,22 +1,44 @@
 {
-  "name": "MyButton",
-  "author": "Shopware AG",
-  "views": [
-     "@Storefront",
-     "@Plugins",
-     "@MyButton"
-  ],
-  "style": [
-    "app/storefront/src/scss/overrides.scss",
-    "@Storefront",
-    "app/storefront/src/scss/base.scss"
-  ],
-  "script": [
-    "@Storefront",
-    "app/storefront/dist/storefront/js/my-button.js"
-  ],
-  "asset": [
-    "@Storefront",
-    "app/storefront/src/assets"
-  ]
+	"name": "MyButton",
+	"author": "Melvin",
+	"views": ["@Storefront", "@Plugins", "@MyButton"],
+	"style": [
+		"app/storefront/src/scss/overrides.scss",
+		"@Storefront",
+		"app/storefront/src/scss/base.scss"
+	],
+	"script": ["@Storefront", "app/storefront/dist/storefront/js/my-button.js"],
+	"asset": ["@Storefront", "app/storefront/src/assets"],
+	"config": {
+		"blocks": {
+			"jsPlugins": {
+				"label": {
+					"en-GB": "JS Plugins",
+					"de-DE": "JS Plugins"
+				}
+			}
+		},
+		"fields": {
+			"ButtonProcessTextContent": {
+				"label": {
+					"en-GB": "Adding to cart button text",
+					"de-DE": "Wird hinzugefügt text"
+				},
+				"type": "text",
+				"value": "Wird in den Warenkorb gelegt",
+				"editable": true,
+				"block": "jsPlugins"
+			},
+			"ButtonProcessColor": {
+				"label": {
+					"en-GB": "Adding to cart transition background color",
+					"de-DE": "Wird hinzugefügt Hintergrundfarbe"
+				},
+				"type": "color",
+				"value": "#595959",
+				"editable": true,
+				"block": "jsPlugins"
+			}
+		}
+	}
 }
