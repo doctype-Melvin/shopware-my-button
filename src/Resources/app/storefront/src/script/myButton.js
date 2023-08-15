@@ -9,8 +9,8 @@ export default class MyButton extends AddToCart {
 	};
 
 	updateButtonAppearance(button) {
-		button.style.backgroundColor = this.options.buttonProcessColor;
 		button.textContent = this.options.buttonProcessTextContent;
+		button.style.backgroundColor = this.options.buttonProcessColor;
 	}
 
 	restoreButtonAppearance(button) {
