@@ -1,7 +1,6 @@
 import AddToCartPlugin from "src/plugin/add-to-cart/add-to-cart.plugin";
 import HttpClient from "src/service/http-client.service";
 import DomAccess from "src/helper/dom-access.helper";
-import Iterator from "src/helper/iterator.helper";
 
 export default class MyButton extends AddToCartPlugin {
 	static options = {
