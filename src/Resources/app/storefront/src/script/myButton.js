@@ -1,6 +1,7 @@
 import AddToCartPlugin from "src/plugin/add-to-cart/add-to-cart.plugin";
 import HttpClient from "src/service/http-client.service";
 import DomAccess from "src/helper/dom-access.helper";
+import Iterator from "src/helper/iterator.helper";
 
 export default class MyButton extends AddToCartPlugin {
 	static options = {
@@ -11,9 +12,9 @@ export default class MyButton extends AddToCartPlugin {
 	};
 
 	init() {
-		this._client = new HttpClient(window.accessKey, window.contextToken);
 		this.PluginManager = window.PluginManager;
 		this._cartEl = DomAccess.querySelector(document, ".header-cart");
+		this._client = new HttpClient(window.accessKey, window.contextToken);
 
 		const allBuyButtons = [...document.querySelectorAll(".btn-buy")];
 		allBuyButtons.forEach((button) => {
